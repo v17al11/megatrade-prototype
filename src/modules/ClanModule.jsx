@@ -6,17 +6,17 @@ const ClanModule = () => {
       <section className="surface-card">
         <div className="surface-card-header flex-wrap gap-3 align-items-start">
           <div>
-            <div className="tag tag-warning">Альянси</div>
-            <h2 className="section-title mt-2">Кланові кімнати та рейтинги</h2>
+            <div className="tag tag-warning">Альянсы</div>
+            <h2 className="section-title mt-2">Клановые комнаты и рейтинги</h2>
             <p className="text-muted mb-0">
-              Користувачі об’єднуються у кланові кімнати з ексклюзивними трейдами, внутрішніми аукціонами та власним рейтингом.
-              Система показує live-хроніку угод і бонуси, які отримують топ-групи.
+              Пользователи объединяются в клановые комнаты с эксклюзивными трейдами, внутренними аукционами и собственным рейтингом.
+              Система показывает live-хронику сделок и бонусы, которые получают топ-группы.
             </p>
           </div>
           <div className="d-flex flex-wrap gap-2">
-            <span className="progress-pill">8 кланів у сезоні</span>
+            <span className="progress-pill">8 кланов в сезоне</span>
             <span className="progress-pill" style={{ background: 'rgba(56,189,248,0.15)', color: '#2563eb' }}>
-              Нові кімнати live
+              Новые комнаты live
             </span>
           </div>
         </div>
@@ -25,8 +25,8 @@ const ClanModule = () => {
           <div className="col-12 col-xl-7 d-flex flex-column gap-4">
             <div className="surface-card">
               <div className="surface-card-header">
-                <h5>Рейтинг кланів</h5>
-                <span className="text-muted small">Оновлення щогодини</span>
+                <h5>Рейтинг кланов</h5>
+                <span className="text-muted small">Обновление каждый час</span>
               </div>
               <div className="d-flex flex-column gap-2">
                 {clanLeaderboard.map((item) => (
@@ -35,7 +35,7 @@ const ClanModule = () => {
                       <div>
                         <h5 className="mb-1">#{item.rank} {item.clan}</h5>
                         <div className="clan-meta">
-                          <span>👥 {item.members} учасників</span>
+                          <span>👥 {item.members} участников</span>
                           <span>⭐ {item.bonuses}</span>
                         </div>
                       </div>
@@ -51,8 +51,8 @@ const ClanModule = () => {
 
             <div className="surface-card">
               <div className="surface-card-header">
-                <h5>Live трейди кланів</h5>
-                <span className="text-muted small">Синхронізовано з live-feed</span>
+                <h5>Live трейды кланов</h5>
+                <span className="text-muted small">Синхронизировано с live-feed</span>
               </div>
               <div className="trade-timeline">
                 {clanTrades.map((trade) => (
@@ -69,8 +69,8 @@ const ClanModule = () => {
           <div className="col-12 col-xl-5 d-flex flex-column gap-4">
             <div className="surface-card">
               <div className="surface-card-header">
-                <h5>Кімнати торгівлі</h5>
-                <span className="text-muted small">Створюйте та модеруйтe</span>
+                <h5>Торговые комнаты</h5>
+                <span className="text-muted small">Создавайте и модерируйте</span>
               </div>
               <div className="d-flex flex-column gap-3">
                 {clanRooms.map((room) => (
@@ -93,28 +93,28 @@ const ClanModule = () => {
 
             <div className="surface-card">
               <div className="surface-card-header">
-                <h5>Заявка на клан</h5>
-                <span className="text-muted small">Розширений флоу</span>
+                <h5>Заявка в клан</h5>
+                <span className="text-muted small">Расширенный флоу</span>
               </div>
               <form className="row g-3">
                 <div className="col-12">
-                  <label className="form-label fw-semibold">Назва клану</label>
-                  <input type="text" className="form-control" placeholder="Введіть назву" />
+                  <label className="form-label fw-semibold">Название клана</label>
+                  <input type="text" className="form-control" placeholder="Введите название" />
                 </div>
                 <div className="col-12">
                   <label className="form-label fw-semibold">Фокус</label>
                   <select className="form-select">
-                    <option>Аукціони</option>
+                    <option>Аукционы</option>
                     <option>Крафтинг</option>
-                    <option>Live-трейди</option>
+                    <option>Live-трейды</option>
                   </select>
                 </div>
                 <div className="col-12">
-                  <label className="form-label fw-semibold">Опис / правила</label>
-                  <textarea className="form-control" rows="3" placeholder="Опишіть цілі та вимоги"></textarea>
+                  <label className="form-label fw-semibold">Описание / правила</label>
+                  <textarea className="form-control" rows="3" placeholder="Опишите цели и требования"></textarea>
                 </div>
                 <div className="col-12">
-                  <label className="form-label fw-semibold">Іконка кімнати</label>
+                  <label className="form-label fw-semibold">Иконка комнаты</label>
                   <div className="d-flex gap-2 flex-wrap">
                     <button type="button" className="btn btn-outline-mega active">⚔️ Forge</button>
                     <button type="button" className="btn btn-outline-mega">🌀 Syndicate</button>
@@ -122,7 +122,7 @@ const ClanModule = () => {
                   </div>
                 </div>
                 <div className="col-12">
-                  <button type="button" className="btn btn-mega">Надіслати заявку</button>
+                  <button type="button" className="btn btn-mega">Отправить заявку</button>
                 </div>
               </form>
             </div>

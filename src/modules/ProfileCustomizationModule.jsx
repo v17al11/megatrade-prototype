@@ -15,15 +15,15 @@ const ProfileCustomizationModule = () => {
       <section className="surface-card">
         <div className="surface-card-header flex-wrap gap-3 align-items-start">
           <div>
-            <div className="tag tag-live">Профілі</div>
-            <h2 className="section-title mt-2">Кастомізація гравця</h2>
+            <div className="tag tag-live">Профили</div>
+            <h2 className="section-title mt-2">Кастомизация игрока</h2>
             <p className="text-muted mb-0">
-              Дозволяємо колекціонерам персоналізувати сторінку профілю: динамічні фони, анімовані рамки та вибір улюблених
-              карток. Усе синхронізується з рейтингами і кланами.
+              Позволяем коллекционерам персонализировать страницу профиля: динамические фоны, анимированные рамки и выбор
+              любимых карточек. Всё синхронизируется с рейтингами и кланами.
             </p>
           </div>
           <div className="d-flex gap-2 flex-wrap">
-            <span className="progress-pill">Нові теми сезону</span>
+            <span className="progress-pill">Новые темы сезона</span>
             <span className="progress-pill" style={{ background: 'rgba(255,184,0,0.15)', color: 'var(--warning)' }}>
               Glow frames
             </span>
@@ -67,9 +67,9 @@ const ProfileCustomizationModule = () => {
               <div className="profile-hero-content">
                 <div className="surface-card" style={{ background: 'rgba(255,255,255,0.12)', color: '#fff' }}>
                   <div className="surface-card-header">
-                    <h5>Вітрина карток</h5>
+                    <h5>Витрина карточек</h5>
                     <span className="text-muted small" style={{ color: 'rgba(255,255,255,0.75) !important' }}>
-                      Обрано {card.name}
+                      Выбрано {card.name}
                     </span>
                   </div>
                   <div className="inventory-grid">
@@ -94,8 +94,8 @@ const ProfileCustomizationModule = () => {
           <div className="col-12 col-xl-5 d-flex flex-column gap-4">
             <div className="surface-card">
               <div className="surface-card-header">
-                <h5>Обрати тему</h5>
-                <span className="text-muted small">Анімовані задні плани</span>
+                <h5>Выбрать тему</h5>
+                <span className="text-muted small">Анимированные фоны</span>
               </div>
               <div className="customization-grid">
                 {profileThemes.map((item) => (
@@ -115,8 +115,8 @@ const ProfileCustomizationModule = () => {
 
             <div className="surface-card">
               <div className="surface-card-header">
-                <h5>Рамки для аватару</h5>
-                <span className="text-muted small">Glow + particle ефекти</span>
+                <h5>Рамки для аватара</h5>
+                <span className="text-muted small">Glow + particle эффекты</span>
               </div>
               <div className="customization-grid">
                 {avatarFrames.map((item) => (
@@ -138,8 +138,8 @@ const ProfileCustomizationModule = () => {
 
             <div className="surface-card">
               <div className="surface-card-header">
-                <h5>Профільні бейджі</h5>
-                <span className="text-muted small">Показуються в live трейдах</span>
+                <h5>Профильные бейджи</h5>
+                <span className="text-muted small">Показываются в live трейдах</span>
               </div>
               <div className="d-flex flex-wrap gap-2">
                 <span className="badge-soft">Top 1%</span>

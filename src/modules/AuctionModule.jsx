@@ -13,17 +13,17 @@ const AuctionModule = () => {
       <section className="surface-card">
         <div className="surface-card-header flex-wrap gap-3 align-items-start">
           <div>
-            <div className="tag tag-live">Нова фіча</div>
-            <h2 className="section-title mt-2">Аукціонна система</h2>
+            <div className="tag tag-live">Новая фича</div>
+            <h2 className="section-title mt-2">Аукционная система</h2>
             <p className="text-muted mb-0">
-              Відкриті торги з таймером, історією ставок та захищеним мінімальним кроком. Гравці змагаються за рідкісні
-              активи, а кланові модератори можуть виставляти особливі лоти.
+              Открытые торги с таймером, историей ставок и защищённым минимальным шагом. Игроки соревнуются за редкие
+              активы, а клановые модераторы могут выставлять особые лоты.
             </p>
           </div>
           <div className="d-flex gap-2 flex-wrap">
-            <span className="progress-pill">3 live-аукціони</span>
+            <span className="progress-pill">3 live-аукциона</span>
             <span className="progress-pill" style={{ background: 'rgba(0,196,140,0.12)', color: 'var(--success)' }}>
-              +18% участі за тиждень
+              +18% участия за неделю
             </span>
           </div>
         </div>
@@ -52,11 +52,11 @@ const AuctionModule = () => {
                       </div>
                       <div className="text-end">
                         <div className="fw-bold">{lot.currentBid}c</div>
-                        <small className="text-muted">Крок +{lot.minIncrement}c</small>
+                        <small className="text-muted">Шаг +{lot.minIncrement}c</small>
                       </div>
                     </div>
                     <div className="text-muted small mt-2">
-                      {lot.bids.length} ставки · {lot.watchers} спостерігачів · Таймер {lot.timeLeft}
+                      {lot.bids.length} ставок · {lot.watchers} наблюдателей · Таймер {lot.timeLeft}
                     </div>
                   </div>
                 </div>
@@ -81,15 +81,15 @@ const AuctionModule = () => {
                         </div>
                         <div className="text-end">
                           <div className="fw-bold display-6">{selectedLot.currentBid}c</div>
-                          <div className="text-muted">Поточна ставка</div>
-                          <small className="text-muted">Мінімальний крок: +{selectedLot.minIncrement}c</small>
+                          <div className="text-muted">Текущая ставка</div>
+                          <small className="text-muted">Минимальный шаг: +{selectedLot.minIncrement}c</small>
                         </div>
                       </div>
                       <div className="mt-3 row g-3">
                         <div className="col-6 col-md-4">
                           <div className="stat-card">
                             <h4>{selectedLot.watchers}</h4>
-                            <span>Спостерігачів</span>
+                            <span>Наблюдателей</span>
                           </div>
                         </div>
                         <div className="col-6 col-md-4">
@@ -101,7 +101,7 @@ const AuctionModule = () => {
                         <div className="col-12 col-md-4">
                           <div className="stat-card">
                             <h4>{selectedLot.timeLeft}</h4>
-                            <span>До завершення</span>
+                            <span>До завершения</span>
                           </div>
                         </div>
                       </div>
@@ -111,14 +111,14 @@ const AuctionModule = () => {
 
                 <div className="surface-card">
                   <div className="surface-card-header">
-                    <h5>Історія ставок</h5>
-                    <div className="text-muted small">Оновлено 5 секунд тому</div>
+                    <h5>История ставок</h5>
+                    <div className="text-muted small">Обновлено 5 секунд назад</div>
                   </div>
                   <div className="trade-timeline">
                     {selectedLot.bids.map((bid, index) => (
                       <div key={index} className="trade-timeline-item">
                         <strong>{bid.bidder}</strong>
-                        <div className="text-muted">Поставив {bid.amount}c · {bid.time}</div>
+                        <div className="text-muted">Поставил {bid.amount}c · {bid.time}</div>
                       </div>
                     ))}
                   </div>
@@ -126,44 +126,44 @@ const AuctionModule = () => {
 
                 <div className="surface-card">
                   <div className="surface-card-header">
-                    <h5>Зробити ставку</h5>
-                    <span className="text-muted small">Введіть суму з урахуванням кроку</span>
+                    <h5>Сделать ставку</h5>
+                    <span className="text-muted small">Введите сумму с учётом шага</span>
                   </div>
                   <form className="row g-3">
                     <div className="col-12 col-sm-6">
-                      <label className="form-label fw-semibold">Сума ставки</label>
+                      <label className="form-label fw-semibold">Сумма ставки</label>
                       <div className="input-group">
                         <span className="input-group-text">c</span>
                         <input type="number" className="form-control" placeholder={selectedLot.currentBid + selectedLot.minIncrement} min={selectedLot.currentBid + selectedLot.minIncrement} />
                       </div>
                     </div>
                     <div className="col-12 col-sm-6">
-                      <label className="form-label fw-semibold">Авто-перекриття</label>
+                      <label className="form-label fw-semibold">Авто-перекрытие</label>
                       <select className="form-select">
-                        <option>+10c до максимуму</option>
-                        <option>+25c до максимуму</option>
-                        <option>Без авто-перекриття</option>
+                        <option>+10c к максимуму</option>
+                        <option>+25c к максимуму</option>
+                        <option>Без авто-перекрытия</option>
                       </select>
                     </div>
                     <div className="col-12">
-                      <label className="form-label fw-semibold">Коментар</label>
-                      <textarea className="form-control" rows="2" placeholder="Залиште повідомлення для продавця"></textarea>
+                      <label className="form-label fw-semibold">Комментарий</label>
+                      <textarea className="form-control" rows="2" placeholder="Оставьте сообщение для продавца"></textarea>
                     </div>
                     <div className="col-12 d-flex gap-2">
-                      <button type="button" className="btn btn-mega">Підтвердити ставку</button>
-                      <button type="button" className="btn btn-outline-mega">Внести в закладки</button>
+                      <button type="button" className="btn btn-mega">Подтвердить ставку</button>
+                      <button type="button" className="btn btn-outline-mega">Добавить в закладки</button>
                     </div>
                   </form>
                 </div>
 
                 <div className="surface-card">
                   <div className="surface-card-header">
-                    <h5>Створити новий лот</h5>
-                    <span className="text-muted small">Доступно власникам карток рівня Rare+</span>
+                    <h5>Создать новый лот</h5>
+                    <span className="text-muted small">Доступно владельцам карточек уровня Rare+</span>
                   </div>
                   <div className="row g-3">
                     <div className="col-12 col-md-6">
-                      <label className="form-label fw-semibold">Вибір предмета</label>
+                      <label className="form-label fw-semibold">Выбор предмета</label>
                       <select className="form-select">
                         <option>Mythic Streamer Pack</option>
                         <option>Neon Creator Coin #07</option>
@@ -171,14 +171,14 @@ const AuctionModule = () => {
                       </select>
                     </div>
                     <div className="col-6 col-md-3">
-                      <label className="form-label fw-semibold">Стартова ціна</label>
+                      <label className="form-label fw-semibold">Стартовая цена</label>
                       <div className="input-group">
                         <span className="input-group-text">c</span>
                         <input className="form-control" type="number" defaultValue={50} />
                       </div>
                     </div>
                     <div className="col-6 col-md-3">
-                      <label className="form-label fw-semibold">Крок торгів</label>
+                      <label className="form-label fw-semibold">Шаг торгов</label>
                       <div className="input-group">
                         <span className="input-group-text">c</span>
                         <input className="form-control" type="number" defaultValue={5} />
@@ -188,23 +188,23 @@ const AuctionModule = () => {
                       <label className="form-label fw-semibold">Режим</label>
                       <div className="btn-group w-100" role="group">
                         <button type="button" className="btn btn-outline-mega active">
-                          Публічний
+                          Публичный
                         </button>
                         <button type="button" className="btn btn-outline-mega">
-                          Клановий
+                          Клановый
                         </button>
                       </div>
                     </div>
                     <div className="col-12 col-md-8">
-                      <label className="form-label fw-semibold">Тривалість</label>
+                      <label className="form-label fw-semibold">Длительность</label>
                       <div className="d-flex gap-2 flex-wrap">
-                        <button type="button" className="btn btn-outline-mega active">2 години</button>
-                        <button type="button" className="btn btn-outline-mega">12 годин</button>
-                        <button type="button" className="btn btn-outline-mega">24 години</button>
+                        <button type="button" className="btn btn-outline-mega active">2 часа</button>
+                        <button type="button" className="btn btn-outline-mega">12 часов</button>
+                        <button type="button" className="btn btn-outline-mega">24 часа</button>
                       </div>
                     </div>
                     <div className="col-12">
-                      <button className="btn btn-mega">Виставити лот</button>
+                      <button className="btn btn-mega">Выставить лот</button>
                     </div>
                   </div>
                 </div>
