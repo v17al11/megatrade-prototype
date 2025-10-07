@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'https://esm.sh/react@18.3.1';
+import { useMemo, useState } from 'react';
 import { auctionLots } from '../data/mockData.js';
 
 const AuctionModule = () => {

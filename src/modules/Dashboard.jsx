@@ -1,5 +1,4 @@
-import React from 'https://esm.sh/react@18.3.1';
-import { useNavigate } from 'https://esm.sh/react-router-dom@6.23.0';
+import { useNavigate } from 'react-router-dom';
 import { liveTrades, topCollectors, onlineUsers, auctionLots, clanLeaderboard } from '../data/mockData.js';
 
 const Dashboard = () => {

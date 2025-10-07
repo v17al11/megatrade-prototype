@@ -1,7 +1,8 @@
-import React, { StrictMode } from 'https://esm.sh/react@18.3.1';
-import { createRoot } from 'https://esm.sh/react-dom@18.3.1/client';
-import { HashRouter } from 'https://esm.sh/react-router-dom@6.23.0';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { HashRouter } from 'react-router-dom';
 import App from './App.jsx';
+import './styles.css';
 
 const rootElement = document.getElementById('root');
 

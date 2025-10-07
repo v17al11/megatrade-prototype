@@ -1,5 +1,4 @@
-import React from 'https://esm.sh/react@18.3.1';
-import { NavLink } from 'https://esm.sh/react-router-dom@6.23.0';
+import { NavLink } from 'react-router-dom';
 
 const navItems = [
   { label: 'Live Trades', path: '/' },

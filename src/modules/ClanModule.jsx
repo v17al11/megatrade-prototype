@@ -1,4 +1,3 @@
-import React from 'https://esm.sh/react@18.3.1';
 import { clanLeaderboard, clanTrades, clanRooms } from '../data/mockData.js';
 
 const ClanModule = () => {

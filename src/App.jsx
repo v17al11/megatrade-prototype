@@ -1,5 +1,4 @@
-import React from 'https://esm.sh/react@18.3.1';
-import { Routes, Route } from 'https://esm.sh/react-router-dom@6.23.0';
+import { Routes, Route } from 'react-router-dom';
 import TopNav from './components/TopNav.jsx';
 import Dashboard from './modules/Dashboard.jsx';
 import AuctionModule from './modules/AuctionModule.jsx';

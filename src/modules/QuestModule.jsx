@@ -1,4 +1,4 @@
-import React, { useState } from 'https://esm.sh/react@18.3.1';
+import { useState } from 'react';
 import { questTracks, achievementShowcase, spotlightCards } from '../data/mockData.js';
 
 const QuestModule = () => {

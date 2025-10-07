@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'https://esm.sh/react@18.3.1';
+import { useMemo, useState } from 'react';
 import { avatarFrames, profileThemes, spotlightCards } from '../data/mockData.js';
 
 const ProfileCustomizationModule = () => {
