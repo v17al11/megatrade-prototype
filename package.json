@@ -1,0 +1,18 @@
+{
+  "name": "megatrade-prototype",
+  "version": "0.1.0",
+  "description": "Interactive MegaTrade.GG feature prototypes built with React via CDN imports.",
+  "type": "module",
+  "scripts": {
+    "dev": "python3 -m http.server 5173",
+    "start": "python3 -m http.server 5173"
+  },
+  "keywords": [
+    "megatrade",
+    "prototype",
+    "react",
+    "bootstrap"
+  ],
+  "author": "",
+  "license": "MIT"
+}
