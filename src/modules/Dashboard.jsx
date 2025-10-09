@@ -1,5 +1,4 @@
-import React from 'https://esm.sh/react@18.3.1';
-import { useNavigate } from 'https://esm.sh/react-router-dom@6.23.0';
+import { useNavigate } from 'react-router-dom';
 import { liveTrades, topCollectors, onlineUsers, auctionLots, clanLeaderboard } from '../data/mockData.js';
 
 const Dashboard = () => {
@@ -13,15 +12,15 @@ const Dashboard = () => {
             <div className="tag tag-live">Prototype Preview</div>
             <h2 className="section-title mt-2">MegaTrade Labs</h2>
             <p className="text-muted mb-0">
-              Оберіть нову фічу, щоб переглянути інтерактивний прототип. Кожен модуль наслідує візуал MegaTrade.GG.
+              Выберите новую фичу, чтобы увидеть интерактивный прототип. Каждый модуль повторяет визуальный стиль MegaTrade.GG.
             </p>
           </div>
           <div className="d-flex flex-wrap gap-2">
             <button className="btn btn-outline-mega" onClick={() => navigate('/auction')}>
-              Перейти до аукціонів
+              Перейти к аукционам
             </button>
             <button className="btn btn-mega" onClick={() => navigate('/quests')}>
-              Подивитися квести
+              Посмотреть квесты
             </button>
           </div>
         </div>
@@ -29,41 +28,41 @@ const Dashboard = () => {
           <div className="feature-card">
             <div>
               <div className="feature-icon auction">⚖️</div>
-              <h3>Аукціони</h3>
-              <p>Динамічні ставки, таймер завершення та історія учасників з миттєвим оновленням.</p>
+              <h3>Аукционы</h3>
+              <p>Динамические ставки, таймер окончания и история участников с мгновенными обновлениями.</p>
             </div>
             <button className="btn btn-mega" onClick={() => navigate('/auction')}>
-              Відкрити модуль
+              Открыть модуль
             </button>
           </div>
           <div className="feature-card">
             <div>
               <div className="feature-icon quests">🎯</div>
-              <h3>Квести та досягнення</h3>
-              <p>Лінії прогресу, нагороди та сезонні активності, що мотивують колекціонерів.</p>
+              <h3>Квесты и достижения</h3>
+              <p>Линии прогресса, награды и сезонные активности, которые мотивируют коллекционеров.</p>
             </div>
             <button className="btn btn-mega" onClick={() => navigate('/quests')}>
-              До прогресу
+              К прогрессу
             </button>
           </div>
           <div className="feature-card">
             <div>
               <div className="feature-icon profile">🌈</div>
-              <h3>Кастомні профілі</h3>
-              <p>Потужний редактор стилів з динамічними фонами, рамками та вітриною карток.</p>
+              <h3>Кастомные профили</h3>
+              <p>Мощный редактор стилей с динамическими фонами, рамками и витриной карточек.</p>
             </div>
             <button className="btn btn-mega" onClick={() => navigate('/profile-customization')}>
-              Налаштувати вигляд
+              Настроить внешний вид
             </button>
           </div>
           <div className="feature-card">
             <div>
               <div className="feature-icon clans">🛡️</div>
-              <h3>Кланові кімнати</h3>
-              <p>Елітні трейди в межах альянсів, рейтинг кланів та live-хроніка угод.</p>
+              <h3>Клановые комнаты</h3>
+              <p>Элитные трейды внутри альянсов, рейтинг кланов и live-хроника сделок.</p>
             </div>
             <button className="btn btn-mega" onClick={() => navigate('/clans')}>
-              Переглянути клан-хаби
+              Посмотреть клан-хабы
             </button>
           </div>
         </div>
@@ -74,7 +73,7 @@ const Dashboard = () => {
           <div className="surface-card">
             <div className="surface-card-header">
               <h5>Live trades</h5>
-              <span className="badge-soft">+12% активність</span>
+              <span className="badge-soft">+12% активность</span>
             </div>
             <div className="d-flex flex-column gap-3">
               {liveTrades.map((trade) => (
@@ -123,9 +122,9 @@ const Dashboard = () => {
 
           <div className="surface-card">
             <div className="surface-card-header">
-              <h5>Кланові аукціони</h5>
+              <h5>Клановые аукционы</h5>
               <a className="text-muted small" onClick={() => navigate('/clans')} role="button">
-                Перейти до альянсів →
+                Перейти к альянсам →
               </a>
             </div>
             <div className="d-flex flex-column gap-3">
@@ -144,7 +143,7 @@ const Dashboard = () => {
                       </div>
                     </div>
                     <div className="text-muted small mt-2">
-                      {lot.bids[0].bidder} веде з {lot.bids[0].amount}c · {lot.watchers} спостерігачів
+                      {lot.bids[0].bidder} лидирует с {lot.bids[0].amount}c · {lot.watchers} наблюдателей
                     </div>
                   </div>
                 </div>
@@ -156,9 +155,9 @@ const Dashboard = () => {
         <div className="col-12 col-lg-6 d-flex flex-column gap-4">
           <div className="surface-card">
             <div className="surface-card-header">
-              <h5>Топ колекціонери</h5>
+              <h5>Топ коллекционеры</h5>
               <button className="btn btn-outline-mega btn-sm" onClick={() => navigate('/profile-customization')}>
-                Переглянути профілі
+                Посмотреть профили
               </button>
             </div>
             <div className="d-flex flex-column gap-2">
@@ -168,10 +167,10 @@ const Dashboard = () => {
                     <span className="fw-bold badge-soft">#{collector.rank}</span>
                     <div>
                       <div className="fw-semibold">{collector.name}</div>
-                      <small className="text-muted">{collector.total} карток</small>
+                      <small className="text-muted">{collector.total} карточек</small>
                     </div>
                   </div>
-                  <span className="text-muted small">↑ У змаганні</span>
+                  <span className="text-muted small">↑ В рейтинге</span>
                 </div>
               ))}
             </div>
@@ -179,12 +178,12 @@ const Dashboard = () => {
 
           <div className="surface-card">
             <div className="surface-card-header">
-              <h5>Онлайн користувачі</h5>
+              <h5>Онлайн пользователи</h5>
               <span className="text-muted small">Режим live</span>
             </div>
             <div className="row g-3">
               <div className="col-12 col-md-6">
-                <h6 className="fw-bold mb-2">Активні</h6>
+                <h6 className="fw-bold mb-2">Активные</h6>
                 <div className="d-flex flex-column gap-2">
                   {onlineUsers.active.map((user) => (
                     <div key={user.name} className="d-flex justify-content-between align-items-center p-2 rounded-3" style={{ background: 'rgba(124,92,255,0.06)' }}>
@@ -195,7 +194,7 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className="col-12 col-md-6">
-                <h6 className="fw-bold mb-2">Щойно були</h6>
+                <h6 className="fw-bold mb-2">Только что были</h6>
                 <div className="d-flex flex-column gap-2">
                   {onlineUsers.recent.map((user) => (
                     <div key={user.name} className="d-flex justify-content-between align-items-center p-2 rounded-3" style={{ background: 'rgba(18,23,29,0.03)' }}>
@@ -210,9 +209,9 @@ const Dashboard = () => {
 
           <div className="surface-card">
             <div className="surface-card-header">
-              <h5>Клановий рейтинг</h5>
+              <h5>Клановый рейтинг</h5>
               <button className="btn btn-outline-mega btn-sm" onClick={() => navigate('/clans')}>
-                Повний рейтинг
+                Полный рейтинг
               </button>
             </div>
             <div className="d-flex flex-column gap-2">
@@ -220,7 +219,7 @@ const Dashboard = () => {
                 <div key={clan.rank} className="d-flex justify-content-between align-items-center p-3 rounded-4" style={{ background: 'rgba(37,99,235,0.06)' }}>
                   <div>
                     <div className="fw-bold">#{clan.rank} {clan.clan}</div>
-                    <small className="text-muted">{clan.members} учасників · {clan.bonuses}</small>
+                    <small className="text-muted">{clan.members} участников · {clan.bonuses}</small>
                   </div>
                   <span className="fw-bold">{clan.rating}</span>
                 </div>

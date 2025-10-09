@@ -1,4 +1,4 @@
-import React, { useState } from 'https://esm.sh/react@18.3.1';
+import { useState } from 'react';
 import { questTracks, achievementShowcase, spotlightCards } from '../data/mockData.js';
 
 const QuestModule = () => {
@@ -12,11 +12,11 @@ const QuestModule = () => {
       <section className="surface-card">
         <div className="surface-card-header flex-wrap gap-3 align-items-start">
           <div>
-            <div className="tag tag-success">Гейміфікація</div>
-            <h2 className="section-title mt-2">Квести та досягнення</h2>
+            <div className="tag tag-success">Геймификация</div>
+            <h2 className="section-title mt-2">Квесты и достижения</h2>
             <p className="text-muted mb-0">
-              Додаємо щоденні, тижневі та сезонні задачі з прогресом і трофеями. Всі нагороди синхронізуються з інвентарем
-              та рейтингом колекціонерів.
+              Добавляем ежедневные, еженедельные и сезонные задания с прогрессом и трофеями. Все награды синхронизируются с
+              инвентарём и рейтингом коллекционеров.
             </p>
           </div>
           <div className="d-flex flex-wrap gap-2">
@@ -37,13 +37,13 @@ const QuestModule = () => {
               <div className="d-flex flex-wrap justify-content-between align-items-center gap-3">
                 <div>
                   <h3 className="fw-bold mb-1">{activeTrack.title}</h3>
-                  <div className="text-muted">Нагорода: {activeTrack.reward}</div>
+                  <div className="text-muted">Награда: {activeTrack.reward}</div>
                 </div>
                 <div className="text-end">
                   <div className="progress" style={{ height: '12px', borderRadius: '999px', width: '220px' }}>
                     <div className="progress-bar" role="progressbar" style={{ width: `${progressPercent}%`, background: 'linear-gradient(135deg, var(--accent), var(--accent-strong))' }} aria-valuenow={progressPercent} aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <small className="text-muted d-block mt-2">{activeTrack.progress} / {activeTrack.total} виконано</small>
+                  <small className="text-muted d-block mt-2">{activeTrack.progress} / {activeTrack.total} выполнено</small>
                 </div>
               </div>
             </div>
@@ -68,8 +68,8 @@ const QuestModule = () => {
           <div className="col-12 col-xl-5 d-flex flex-column gap-4">
             <div className="surface-card" style={{ background: 'rgba(255,255,255,0.9)' }}>
               <div className="surface-card-header">
-                <h5>Досягнення</h5>
-                <span className="text-muted small">Вітрина нагород</span>
+                <h5>Достижения</h5>
+                <span className="text-muted small">Витрина наград</span>
               </div>
               <div className="d-flex flex-column gap-3">
                 {achievementShowcase.map((achievement) => (
@@ -92,7 +92,7 @@ const QuestModule = () => {
             <div className="surface-card">
               <div className="surface-card-header">
                 <h5>Карта дня</h5>
-                <span className="text-muted small">Отримайте +30% XP</span>
+                <span className="text-muted small">Получите +30% XP</span>
               </div>
               <div className="inventory-grid">
                 {spotlightCards.map((card) => (
@@ -107,15 +107,15 @@ const QuestModule = () => {
 
             <div className="surface-card">
               <div className="surface-card-header">
-                <h5>Щоденний бустер</h5>
-                <span className="text-muted small">Активуйте до 23:59</span>
+                <h5>Ежедневный бустер</h5>
+                <span className="text-muted small">Активируйте до 23:59</span>
               </div>
               <div className="d-flex flex-column gap-3">
                 <div className="p-3 rounded-4" style={{ background: 'linear-gradient(135deg, rgba(34,197,94,0.15), rgba(249,115,22,0.1))' }}>
-                  <div className="fw-bold">x2 XP за трейди</div>
-                  <small className="text-muted">Діє 1 годину після активації</small>
+                  <div className="fw-bold">x2 XP за трейды</div>
+                  <small className="text-muted">Действует 1 час после активации</small>
                 </div>
-                <button className="btn btn-mega">Активувати бустер</button>
+                <button className="btn btn-mega">Активировать бустер</button>
               </div>
             </div>
           </div>
